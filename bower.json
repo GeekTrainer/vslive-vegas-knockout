@@ -1,0 +1,21 @@
+{
+  "name": "knockout-demo",
+  "description": "Demo app for VS Live",
+  "license": "MIT",
+  "homepage": "index.html",
+  "dependencies": {
+      "knockout": "*",
+      "jquery": "*",
+      "bootstrap-css": "*"
+  },
+  "install": {
+    "path":"lib"  
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Bug tracker</title>
+        <link rel="stylesheet" href="lib/bootstrap-css/bootstrap.min.css" />
+        <style>
+            .jumbotron { padding: 10px; }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+            <div class="jumbotron">
+                <h3>Bug Tracker</h3>
+            </div>
+            <div class="row">
+                <!-- Developers -->
+                <div class="col-sm-6">
+                    <h4>Developers</h4>
+                    <ul class="list-group">
+                    <li class="list-group-item">
+                            <span>Placeholder for developers</span>
+                            <span class="badge">0</span>
+                    </li>
+                    </ul>
+                    
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="name" class="control-label col-sm-4">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="twitter" class="control-label col-sm-4">Twitter</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="twitter" />
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-4">
+                            <button type="button" class="btn btn-success">Add developer</button>
+                        </div>
+                    </form>
+                </div>
+            
+                <!-- Bugs -->
+                <div class="col-sm-6">
+                    <h4>Bugs</h4>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="title" class="control-label col-sm-4">Title</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="title" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="control-label col-sm-4">Description</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="description" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="developer" class="control-label col-sm-4">Developer</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>Placeholder for developers</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-4">
+                            <button type="button" class="btn btn-success">Add bug</button>
+                        </div>                        
+                     </form>
+                </div>   
+            </div>
+       </div>       
+       
+       <script src="lib/jquery/jquery.js"></script>
+       <script src="lib/bootstrap-css/bootstrap.min.js"></script>
+       <script src="lib/knockout/knockout.js"></script>
+       
+       <script>
+           var Developer = function(name, twitter) {
+               var self = this;
+               self.name = name;
+               self.twitter = twitter;
+               self.bugs = [];
+           }
+           
+           var Bug = function(title, description, developer) {
+               var self = this;
+               self.title = title;
+               self.description = description;
+               self.developer = developer;
+           }
+           
+           var AppViewModel = function() {
+               var self = this;
+               self.developers = [];
+               self.newDeveloper = null;
+           }
+       </script> 
+    </body>
+</html>

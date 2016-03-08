@@ -1,0 +1,14 @@
+{
+  "name": "knockout-subway",
+  "version": "1.0.0",
+  "scripts": {
+    "lite": "lite-server"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.1.0"
+  },
+  "dependencies": {
+      "bower-installer": "*"
+  }
+}
